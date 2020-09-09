@@ -1,0 +1,10 @@
+.mat-sidenav{
+    width: 250px;
+}
+.mat-drawer{
+    background-color:#006611;
+    color: white; 
+}
+.toolbar.span{
+    flex: 1 1 auto; 
+}
