@@ -5,7 +5,7 @@ fxLayoutAlign="center">
 <div fxFlex="100"> 
     <mat-card class="main-card">
         <mat-card-header>
-            <mat-card-title>Manage Customer</mat-card-title>
+            <mat-card-title>Manage Item</mat-card-title>
           </mat-card-header>
           <mat-divider></mat-divider>
           <mat-card-content style="margin-top: 20px;">
@@ -13,89 +13,74 @@ fxLayoutAlign="center">
               <div fxFlex="50">
                 <div class="form-ctl">
                   <mat-form-field class="custForm" style="width: 100%;">
-                    <mat-label>Customer ID</mat-label>
+                    <mat-label>Item Code</mat-label>
                     <input matInput >
                   </mat-form-field>
                 </div>
               </div>
               <div fxFlex="50">
-                  <button mat-raised-button color="primary" style="margin: 5px;">+ New Customer</button>
+                  <button mat-raised-button color="primary" style="margin: 5px;">+ New Item</button>
               </div>
             </div>
             <div fxLayout="row" fxLayout.sm="row" fxLayout.xs="column" fxLayoutWrap fxLayoutAlign="right">
-              <div fxFlex="50">
+              <div fxFlex="35">
                 <div class="form-ctl">
                   <mat-form-field class="custForm" style="width: 100%;">
-                    <mat-label>Customer Name</mat-label>
+                    <mat-label>Item Description</mat-label>
                     <input matInput >
                   </mat-form-field>
                 </div>
               </div>
-                <div fxFlex="50">
+                <div fxFlex="35">
                   <div class="form-ctl">
                     <mat-form-field class="custForm" style="width: 100%;">
-                      <mat-label>Customer Address</mat-label>
+                      <mat-label>Item QTY</mat-label>
                     <input matInput >
                     </mat-form-field>
                   </div>
                 </div>
-                </div>
-                <div fxLayout="row" fxLayout.sm="row" fxLayout.xs="column" fxLayoutWrap fxLayoutAlign="right">
-                  <div fxFlex="50">
+                <div fxFlex="35">
                     <div class="form-ctl">
                       <mat-form-field class="custForm" style="width: 100%;">
-                        <mat-label>Customer Contact</mat-label>
+                        <mat-label>Item UnitPrice</mat-label>
                         <input matInput >
                       </mat-form-field>
                     </div>
                   </div>
-                    <div fxFlex="50">
-                      <div class="form-ctl">
-                        <mat-form-field class="custForm" style="width: 100%;">
-                          <mat-label>Customer Salary</mat-label>
-                          <input matInput >
-                        </mat-form-field>
-                      </div>
-                    </div>
-                    </div>
+                </div>
                     <div fxLayout="row" fxLayout.sm="row" fxLayout.xs="column" fxLayoutWrap fxLayoutAlign="right">
                       <div fxFlex="100" style="text-align: right;">
                         <span style="flex: 1 1 auto; "></span>
-                        <button mat-raised-button color="primary" style="margin:5px">Save Customer</button>
-                        <button mat-raised-button color="primary" style="margin:5px">Update Customer</button>
-                        <button mat-raised-button color="warn" style="margin:5px">Delete Customer</button>
+                        <button mat-raised-button color="primary" style="margin:5px">Save Item</button>
+                        <button mat-raised-button color="primary" style="margin:5px">Update Item</button>
+                        <button mat-raised-button color="warn" style="margin:5px">Delete Item</button>
                       </div>
                         </div>
                         <div fxLayout="row" fxLayout.sm="row" fxLayout.xs="column" fxLayoutWrap fxLayoutAlign="center">
                           <div fxFlex="100%" class="main-table">
                             <mat-table >
-                              <ng-container matColumnDef="id">
-                                <mat-header-cell *matHeaderCellDef> Customer ID </mat-header-cell>
+                              <ng-container matColumnDef="code">
+                                <mat-header-cell *matHeaderCellDef> Item Code </mat-header-cell>
                                 <mat-cell *matCellDef="let row"> {{row.username}} </mat-cell>
                               </ng-container>
                             
-                              <ng-container matColumnDef="name">
-                                <mat-header-cell *matHeaderCellDef> Customer Name </mat-header-cell>
+                              <ng-container matColumnDef="description">
+                                <mat-header-cell *matHeaderCellDef> Item Description </mat-header-cell>
                                 <mat-cell *matCellDef="let row"> {{row.age}} </mat-cell>
                               </ng-container>
                             
-                              <ng-container matColumnDef="address">
-                                <mat-header-cell *matHeaderCellDef> Customer Address </mat-header-cell>
+                              <ng-container matColumnDef="qty">
+                                <mat-header-cell *matHeaderCellDef> Item Qty </mat-header-cell>
                                 <mat-cell *matCellDef="let row"> {{row.title}} </mat-cell>
                               </ng-container>
 
-                              <ng-container matColumnDef="tel">
-                                <mat-header-cell *matHeaderCellDef> Customer Contact </mat-header-cell>
-                                <mat-cell *matCellDef="let row"> {{row.title}} </mat-cell>
-                              </ng-container>
-
-                              <ng-container matColumnDef="salary">
-                                <mat-header-cell *matHeaderCellDef> Customer Salary </mat-header-cell>
+                              <ng-container matColumnDef="unitprice">
+                                <mat-header-cell *matHeaderCellDef> Item UnitPrice </mat-header-cell>
                                 <mat-cell *matCellDef="let row"> {{row.title}} </mat-cell>
                               </ng-container>
                               
-                              <mat-header-row *matHeaderRowDef="displayedCustomerColumns;sticky: true"></mat-header-row>
-                              <mat-row *matRowDef="let row;columns:displayedCustomerColumns;"></mat-row>
+                              <mat-header-row *matHeaderRowDef="displayedItemColumns;sticky: true"></mat-header-row>
+                              <mat-row *matRowDef="let row;columns:displayedItemColumns;"></mat-row>
                             </mat-table>
                         
                         

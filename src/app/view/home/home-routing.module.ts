@@ -10,8 +10,13 @@ const routes: Routes = [{
   component: HomeComponent ,
       children:[{
        path:'customer',
-       loadChildren:"src/app/view/customer/customer.module#CustomerModule"
-}]}
+       loadChildren:"src/app/view/customer/customer.module#CustomerModule"},
+      {
+        path:'item',
+        loadChildren:"src/app/view/item/item.module#ItemModule"
+      }
+      
+      ]}
 
 ];
 
